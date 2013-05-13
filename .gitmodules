@@ -7,3 +7,6 @@
 [submodule "bundle/bufexplorer"]
 	path = bundle/bufexplorer
 	url = https://github.com/vim-scripts/bufexplorer.zip.git
+[submodule "bundle/codecomplete"]
+	path = bundle/codecomplete
+	url = https://github.com/mbbill/code_complete.git
