@@ -13,3 +13,6 @@
 [submodule "bundle/coffe-script"]
 	path = bundle/coffe-script
 	url = https://github.com/kchmck/vim-coffee-script.git
+[submodule "bundle/colorschemes"]
+	path = bundle/colorschemes
+	url = https://github.com/flazz/vim-colorschemes.git
