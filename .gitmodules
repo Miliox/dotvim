@@ -91,3 +91,6 @@
 [submodule "bundle/xolox-shell"]
 	path = bundle/xolox-shell
 	url = https://github.com/xolox/vim-shell.git
+[submodule "bundle/snipmate"]
+	path = bundle/snipmate
+	url = https://github.com/msanders/snipmate.vim.git
