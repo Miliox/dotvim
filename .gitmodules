@@ -19,3 +19,6 @@
 [submodule "bundle/command-t"]
 	path = bundle/command-t
 	url = https://github.com/wincent/Command-T.git
+[submodule "bundle/delimit-mate"]
+	path = bundle/delimit-mate
+	url = https://github.com/Raimondi/delimitMate.git
