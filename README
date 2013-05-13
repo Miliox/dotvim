@@ -3,6 +3,8 @@ Installation:
 
 Create symlinks:
     ln -s ~/.vim/.vimrc ~/.vimrc
+    ln -s ~/.vim/.gvimrc ~/.gvimrc
 
     or (Windows)
-    mklink /H %USERPROFILE%/.vimrc %USERPROFILE%/.vim/.vimrc
+    mklink /H %HOME%\.vimrc %HOME%\.vim\.vimrc
+    mklink /H %HOME%\.gvimrc %HOME%\.vim\.gvimrc

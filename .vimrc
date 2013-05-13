@@ -165,7 +165,6 @@ autocmd BufWritePre * :%s/\s\+$//e
 vmap Q gq
 nmap Q gqap
 
-
 " Alert problems
 hi Problem ctermbg=red guibg=red
 match Problem /\s\+$/
@@ -175,17 +174,5 @@ autocmd BufWritePre *.py, *.js, *.dtml :call Preserver("%s/\\s\\+$//e")
 
 let g:neocomplcache_enable_at_startup = 1
 
-" Theme
 colorscheme BlackSea
-if has("gui_running")
-    set guifont=Consolas:h12:cANSI
-
-    set guioptions-=m " remove menu bar
-    set guioptions-=T " remove toolbar
-    set guioptions-=r " remove righ-hand scroll bar
-    set guioptions-=e " remove visual tabs
-    set guioptions+=c " console dialogs over gui dialogs
-endif
-
-
 filetype plugin indent on " Detect file type
