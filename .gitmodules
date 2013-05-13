@@ -85,3 +85,6 @@
 [submodule "bundle/pytest"]
 	path = bundle/pytest
 	url = https://github.com/alfredodeza/pytest.vim.git
+[submodule "bundle/rope"]
+	path = bundle/rope
+	url = https://github.com/sontek/rope-vim.git
