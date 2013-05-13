@@ -121,3 +121,6 @@
 [submodule "bundle/shougo-vimshell"]
 	path = bundle/shougo-vimshell
 	url = https://github.com/Shougo/vimshell.git
+[submodule "bundle/vimproc"]
+	path = bundle/vimproc
+	url = https://github.com/Shougo/vimproc.git
