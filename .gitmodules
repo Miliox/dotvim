@@ -88,3 +88,6 @@
 [submodule "bundle/rope"]
 	path = bundle/rope
 	url = https://github.com/sontek/rope-vim.git
+[submodule "bundle/xolox-shell"]
+	path = bundle/xolox-shell
+	url = https://github.com/xolox/vim-shell.git
