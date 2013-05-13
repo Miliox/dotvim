@@ -40,3 +40,6 @@
 [submodule "bundle/git"]
 	path = bundle/git
 	url = https://github.com/tpope/vim-git.git
+[submodule "bundle/gundo"]
+	path = bundle/gundo
+	url = https://github.com/sjl/gundo.vim.git
