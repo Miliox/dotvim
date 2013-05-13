@@ -21,6 +21,8 @@ set list                       " Show invisible characters
 set wildmenu                   " Show Suggestion in Command Mode
 set wildmode=list:longest,full " List Available Command Options
 
+execute pathogen#infect()
+
 " Typo Fixes
 cab W  w
 cab Q  q
@@ -163,7 +165,6 @@ autocmd BufWritePre * :%s/\s\+$//e
 vmap Q gq
 nmap Q gqap
 
-filetype plugin indent on " Detect file type
 
 " Alert problems
 hi Problem ctermbg=red guibg=red
@@ -172,7 +173,6 @@ match Problem /^\s\*\t\+\s\*/
 nnoremap <silent> ,a :call Preserve("%s/\\s\\+$//e")<CR>
 autocmd BufWritePre *.py, *.js, *.dtml :call Preserver("%s/\\s\\+$//e")
 
-execute pathogen#infect()
 let g:neocomplcache_enable_at_startup = 1
 
 " Theme
@@ -187,3 +187,5 @@ if has("gui_running")
     set guioptions+=c " console dialogs over gui dialogs
 endif
 
+
+filetype plugin indent on " Detect file type
