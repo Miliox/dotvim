@@ -10,3 +10,6 @@
 [submodule "bundle/codecomplete"]
 	path = bundle/codecomplete
 	url = https://github.com/mbbill/code_complete.git
+[submodule "bundle/coffe-script"]
+	path = bundle/coffe-script
+	url = https://github.com/kchmck/vim-coffee-script.git
