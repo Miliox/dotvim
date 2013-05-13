@@ -115,3 +115,9 @@
 [submodule "bundle/unimpaired"]
 	path = bundle/unimpaired
 	url = https://github.com/tpope/vim-unimpaired.git
+[submodule "bundle/vimerl"]
+	path = bundle/vimerl
+	url = https://github.com/jimenezrick/vimerl.git
+[submodule "bundle/shougo-vimshell"]
+	path = bundle/shougo-vimshell
+	url = https://github.com/Shougo/vimshell.git
