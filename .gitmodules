@@ -52,3 +52,6 @@
 [submodule "bundle/lh"]
 	path = bundle/lh
 	url = https://github.com/intuited/lh-vim-lib.git
+[submodule "bundle/makegreen"]
+	path = bundle/makegreen
+	url = https://github.com/reinh/vim-makegreen.git
