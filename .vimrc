@@ -29,6 +29,7 @@ cab Q  q
 cab Wq wq
 cab wQ wq
 cab WQ wq
+cab Qa qa
 
 " Real programmers don't use tabs but spaces
 set expandtab      " Convert pressed tab to spaces
@@ -41,30 +42,29 @@ set tabstop=4      " Number of spaces that a tab counts
 nnoremap ; :
 
 " Undo
-noremap  <C-Z> :undo<CR>
-inoremap <C-Z> :undo<CR>
-vnoremap <C-Z> :undo<CR>
+noremap  <silent> <C-Z> :undo<CR>
+vnoremap <silent> <C-Z> :undo<CR>
+inoremap <silent> <C-Z> <ESC>:undo<CR>i
 
 " Redo
-noremap  <C-Y> <C-R>
-inoremap <C-Y> <C-R>
-vnoremap <C-Y> <C-R>
+noremap  <silent> <C-Y> <C-R>
+inoremap <silent> <C-Y> <C-R>
+vnoremap <silent> <C-Y> <C-R>
 
 " Save
-noremap  <C-S> :update<CR>
-inoremap <C-S> :update<CR>
-vnoremap <C-S> :update<CR>
+noremap  <silent> <C-S> :update<CR>
+vnoremap <silent> <C-S> :update<CR>
+inoremap <silent> <C-S> <ESC>:update<CR>i
 
 " Copy to Clipboard
 noremap  <C-C> Y
-inoremap <C-C> Y
 vnoremap <C-C> y
+inoremap <C-C> <ESC>Yi
 
-
-" Copy to Clipboard
+" Close Vim
 noremap  <C-X> :quit<CR>
-inoremap <C-X> :quit<CR>
 vnoremap <C-X> :quit<CR>
+inoremap <C-X> <ESC>:quit<CR>i
 
 " Firefox Like TabNavigation
 nnoremap <C-S-tab> :tabprevious<CR>
@@ -97,18 +97,18 @@ nnoremap <A-9> 9gt
 nnoremap <A-0> 10gt
 
 " Split Navigation
-map <C-h> <C-w>h
-map <C-j> <C-w>j
-map <C-k> <C-w>k
-map <C-l> <C-w>l
+map <silent> <C-h> <C-w>h
+map <silent> <C-j> <C-w>j
+map <silent> <C-k> <C-w>k
+map <silent> <C-l> <C-w>l
 
 " Bubble single lines
-nmap <C-Up>   [e
-nmap <C-Down> ]e
+nmap <silent> <C-Up>   [e
+nmap <silent> <C-Down> ]e
 
 " Bubble multiple lines
-nmap <C-Up>   [egv
-nmap <C-Down> ]egv
+nmap <silent> <C-Up>   [egv
+nmap <silent> <C-Down> ]egv
 
 " Sort Functions to a key when press '\'s
 vnoremap <Leader>s :sort<CR>
@@ -152,7 +152,7 @@ noremap! [' ['']<esc>hi
 noremap! [" [""]<esc>hi
 
 " Invisible characters
-set listchars=tab:>\ ,eol:¬
+set listchars=tab:>\ ,eol:¬,trail:.
 
 " Show WhiteSpaces
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
@@ -166,13 +166,12 @@ vmap Q gq
 nmap Q gqap
 
 " Alert problems
-hi Problem ctermbg=red guibg=red
+highlight Problem ctermbg=red guibg=red
 match Problem /\s\+$/
 match Problem /^\s\*\t\+\s\*/
 nnoremap <silent> ,a :call Preserve("%s/\\s\\+$//e")<CR>
 autocmd BufWritePre *.py, *.js, *.dtml :call Preserver("%s/\\s\\+$//e")
 
-let g:neocomplcache_enable_at_startup = 1
 let g:vimshell_prompt = "$"
 let g:vimshell_secondary_prompt = ">"
 
