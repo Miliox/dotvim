@@ -10,9 +10,11 @@ syntax enable " Highlight
 set autoread                   " Reaload file if changed outside
 set backspace=indent,eol,start " Expected Behaviour for Backspace
 set backup                     " Always keep a backup file
+set columns=84                 " Initial column length
 set clipboard=unnamed          " Expected Behaviour for Clipboard
 set foldmethod=indent          " Hide methods content
 set laststatus=2               " Show Status Line
+set lines=34                   " Initial line length
 set mouse=a                    " Expected Behaviour for Mouse
 set nocompatible               " Remove VI Annoyance
 set nowrap                     " Don't break in virtual lines
@@ -20,6 +22,7 @@ set number                     " Show Line Number
 set list                       " Show invisible characters
 set wildmenu                   " Show Suggestion in Command Mode
 set wildmode=list:longest,full " List Available Command Options
+set virtualedit=onemore        " Virtual character in the end line
 
 execute pathogen#infect()
 
@@ -44,34 +47,34 @@ nnoremap ; :
 " Undo
 noremap  <silent> <C-Z> :undo<CR>
 vnoremap <silent> <C-Z> :undo<CR>
-inoremap <silent> <C-Z> <ESC>:undo<CR>i
+inoremap <silent> <C-Z> <ESC>:undo<CR>`[
 
 " Redo
-noremap  <silent> <C-Y> <C-R>
 inoremap <silent> <C-Y> <C-R>
+noremap  <silent> <C-Y> <C-R>
 vnoremap <silent> <C-Y> <C-R>
 
 " Save
 noremap  <silent> <C-S> :update<CR>
 vnoremap <silent> <C-S> :update<CR>
-inoremap <silent> <C-S> <ESC>:update<CR>i
+inoremap <silent> <C-S> <ESC>:update<CR>`[
 
 " Copy to Clipboard
-noremap  <C-C> Y
-vnoremap <C-C> y
-inoremap <C-C> <ESC>Yi
+noremap  <silent> <C-C> Y
+vnoremap <silent> <C-C> y
+inoremap <silent> <C-C> <ESC>Y`[
 
 " Close Vim
-noremap  <C-X> :quit<CR>
-vnoremap <C-X> :quit<CR>
-inoremap <C-X> <ESC>:quit<CR>i
+noremap  <silent> <C-X> :quit<CR>
+vnoremap <silent> <C-X> :quit<CR>
+inoremap <silent> <C-X> <ESC>:quit<CR>`[
 
 " Firefox Like TabNavigation
 nnoremap <C-S-tab> :tabprevious<CR>
 nnoremap <C-tab>   :tabnext<CR>
 nnoremap <C-t>     :tabnew<CR>
-inoremap <C-S-tab> <Esc>:tabprevious<CR>i
-inoremap <C-tab>   <Esc>:tabnext<CR>i
+inoremap <C-S-tab> <Esc>:tabprevious<CR>`[
+inoremap <C-tab>   <Esc>:tabnext<CR>`[
 inoremap <C-t>     <Esc>:tabnew<CR>
 
 " Vi Like TAbNavigation
@@ -166,12 +169,13 @@ vmap Q gq
 nmap Q gqap
 
 " Alert problems
-highlight Problem ctermbg=red guibg=red
+hi Problem ctermbg=red guibg=red
 match Problem /\s\+$/
 match Problem /^\s\*\t\+\s\*/
 nnoremap <silent> ,a :call Preserve("%s/\\s\\+$//e")<CR>
 autocmd BufWritePre *.py, *.js, *.dtml :call Preserver("%s/\\s\\+$//e")
 
+let g:neocomplcache_enable_at_startup = 1
 let g:vimshell_prompt = "$"
 let g:vimshell_secondary_prompt = ">"
 
