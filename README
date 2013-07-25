@@ -2,10 +2,7 @@ Installation:
     git clone --recursive git://github.com/Miliox/dotvim.git ~/.vim/
 
 Create symlinks:
-    ln -s ~/.vim/.vimrc ~/.vimrc
-    ln -s ~/.vim/.gvimrc ~/.gvimrc
+    $ ./create_link.sh
 
     or (Windows)
-    mklink /H %HOME%\.vimrc %HOME%\.vim\.vimrc
-    mklink /H %HOME%\.gvimrc %HOME%\.vim\.gvimrc
-    mklink /J %HOME%\vimfiles %HOME%\.vim
+    > create_link.bat
