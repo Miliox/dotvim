@@ -179,5 +179,5 @@ let g:neocomplcache_enable_at_startup = 1
 let g:vimshell_prompt = "$"
 let g:vimshell_secondary_prompt = ">"
 
-colorscheme BlackSea
+colorscheme MyBlackSea
 filetype plugin indent on " Detect file type
