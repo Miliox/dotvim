@@ -26,6 +26,11 @@ set virtualedit=onemore        " Virtual character in the end line
 
 execute pathogen#infect()
 
+let g:vimshell_prompt = "$"
+let g:vimshell_secondary_prompt = ">"
+let g:easytags_updatetime_warn = 0
+let g:easytags_suppress_ctags_warning = 1
+
 " Typo Fixes
 cab W  w
 cab Q  q
@@ -175,9 +180,6 @@ match Problem /^\s\*\t\+\s\*/
 nnoremap <silent> ,a :call Preserve("%s/\\s\\+$//e")<CR>
 autocmd BufWritePre *.py, *.js, *.dtml :call Preserver("%s/\\s\\+$//e")
 
-let g:neocomplcache_enable_at_startup = 1
-let g:vimshell_prompt = "$"
-let g:vimshell_secondary_prompt = ">"
 
 colorscheme MyBlackSea
 filetype plugin indent on " Detect file type
