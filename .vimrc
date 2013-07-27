@@ -28,8 +28,6 @@ execute pathogen#infect()
 
 let g:vimshell_prompt = "$"
 let g:vimshell_secondary_prompt = ">"
-let g:easytags_updatetime_warn = 0
-let g:easytags_suppress_ctags_warning = 1
 
 " Typo Fixes
 cab W  w
@@ -179,7 +177,6 @@ match Problem /\s\+$/
 match Problem /^\s\*\t\+\s\*/
 nnoremap <silent> ,a :call Preserve("%s/\\s\\+$//e")<CR>
 autocmd BufWritePre *.py, *.js, *.dtml :call Preserver("%s/\\s\\+$//e")
-
 
 colorscheme MyBlackSea
 filetype plugin indent on " Detect file type
