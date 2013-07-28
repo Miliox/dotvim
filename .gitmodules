@@ -81,7 +81,7 @@
 	url = https://github.com/sontek/rope-vim.git
 [submodule "bundle/snipmate"]
 	path = bundle/snipmate
-	url = https://github.com/msanders/snipmate.vim.git
+	url = https://github.com/garbas/vim-snipmate.git
 [submodule "bundle/sparkup"]
 	path = bundle/sparkup
 	url = https://github.com/bingaman/vim-sparkup.git
@@ -112,3 +112,12 @@
 [submodule "bundle/vimproc"]
 	path = bundle/vimproc
 	url = https://github.com/Shougo/vimproc.git
+[submodule "bundle/tlib"]
+	path = bundle/tlib
+	url = https://github.com/tomtom/tlib_vim.git
+[submodule "bundle/addon-mw-utils"]
+	path = bundle/addon-mw-utils
+	url = https://github.com/MarcWeber/vim-addon-mw-utils.git
+[submodule "bundle/snippets"]
+	path = bundle/snippets
+	url = https://github.com/honza/vim-snippets

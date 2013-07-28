@@ -5,6 +5,12 @@
 scriptencoding utf-8
 set encoding=utf-8
 
+" Pathogen
+filetype off " Pathogen needs to run before plugin indent on
+call pathogen#runtime_append_all_bundles()
+call pathogen#helptags() " generate helptags for everything in 'runtimepath'
+filetype plugin indent on
+
 syntax enable " Highlight
 
 set autoread                   " Reaload file if changed outside
@@ -24,10 +30,9 @@ set wildmenu                   " Show Suggestion in Command Mode
 set wildmode=list:longest,full " List Available Command Options
 set virtualedit=onemore        " Virtual character in the end line
 
-execute pathogen#infect()
-
 let g:vimshell_prompt = "$"
 let g:vimshell_secondary_prompt = ">"
+let g:templates_plugin_loaded = 1
 
 " Typo Fixes
 cab W  w
