@@ -5,9 +5,10 @@
 scriptencoding utf-8
 set encoding=utf-8
 
+
 " Pathogen
 filetype off " Pathogen needs to run before plugin indent on
-call pathogen#runtime_append_all_bundles()
+call pathogen#incubate()
 call pathogen#helptags() " generate helptags for everything in 'runtimepath'
 filetype plugin indent on
 
@@ -20,6 +21,7 @@ set columns=84                 " Initial column length
 set clipboard=unnamed          " Expected Behaviour for Clipboard
 set foldmethod=indent          " Hide methods content
 set laststatus=2               " Show Status Line
+set hlsearch                   " Enable search in highlight
 set lines=34                   " Initial line length
 set mouse=a                    " Expected Behaviour for Mouse
 set nocompatible               " Remove VI Annoyance
@@ -30,9 +32,6 @@ set wildmenu                   " Show Suggestion in Command Mode
 set wildmode=list:longest,full " List Available Command Options
 set virtualedit=onemore        " Virtual character in the end line
 
-let g:vimshell_prompt = "$"
-let g:vimshell_secondary_prompt = ">"
-let g:templates_plugin_loaded = 1
 
 " Typo Fixes
 cab W  w
@@ -190,3 +189,11 @@ elseif has("unix")
 endif
 
 filetype plugin indent on " Detect file type
+
+let g:snippet_dirs = "$HOME/.vim/bundle/snippets/snippets"
+let g:vimshell_prompt = "$"
+let g:vimshell_secondary_prompt = ">"
+let g:templates_plugin_loaded = 1
+let g:SuperTabDefaultCompletionType = "context"
+
+source $HOME/.vim/bundle/snipmate/after/plugin/snipMate.vim
