@@ -43,9 +43,6 @@
 [submodule "bundle/L9"]
 	path = bundle/L9
 	url = https://github.com/vim-scripts/L9.git
-[submodule "bundle/latexsuite"]
-	path = bundle/latexsuite
-	url = https://github.com/gerw/vim-latex-suite.git
 [submodule "bundle/lh"]
 	path = bundle/lh
 	url = https://github.com/intuited/lh-vim-lib.git
