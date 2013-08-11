@@ -120,6 +120,22 @@ nmap <silent> <C-Down> ]e
 nmap <silent> <C-Up>   [egv
 nmap <silent> <C-Down> ]egv
 
+" Spell Check
+let b:myLang=0
+let g:myLangList=["nospell", "en_us", "pt_br", "de_de"]
+function! ToggleSpell()
+  let b:myLang=b:myLang+1
+  if b:myLang>=len(g:myLangList) | let b:myLang=0 | endif
+  if b:myLang==0
+    setlocal nospell
+  else
+    execute "setlocal spell spelllang=".get(g:myLangList, b:myLang)
+  endif
+  echo "spell checking language:" g:myLangList[b:myLang]
+endfunction
+
+nmap <silent> <Leader>l :call ToggleSpell()<CR>
+
 " Sort Functions to a key when press '\'s
 vnoremap <Leader>s :sort<CR>
 
