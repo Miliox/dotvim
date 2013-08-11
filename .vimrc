@@ -207,6 +207,14 @@ endif
 filetype plugin indent on " Detect file type
 
 let g:snippet_dirs = "$HOME/.vim/bundle/snippets/snippets"
+nmap <silent> <C-space> :call snipMate#TriggerSnippet()<CR>
+imap <silent> <C-space> <Esc>l:call snipMate#TriggerSnippet()<CR>i
+vmap <silent> <C-space> <Esc>l:call snipMate#TriggerSnippet()<CR>v
+
+nmap <silent> <C-S-space> :call snipMate#BackwardsSnippet()<CR>
+imap <silent> <C-S-space> <Esc>l:call snipMate#BackwardsSnippet()<CR>i
+smap <silent> <C-S-space> <Esc>l:call snipMate#BackwardsSnippet()<CR>v
+
 let g:vimshell_prompt = "$"
 let g:vimshell_secondary_prompt = ">"
 let g:templates_plugin_loaded = 1
