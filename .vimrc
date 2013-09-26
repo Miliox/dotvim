@@ -5,12 +5,14 @@
 scriptencoding utf-8
 set encoding=utf-8
 
-
 " Pathogen
 filetype off " Pathogen needs to run before plugin indent on
 call pathogen#incubate()
 call pathogen#helptags() " generate helptags for everything in 'runtimepath'
 filetype plugin indent on
+
+scriptencoding utf-8
+set encoding=utf-8
 
 syntax enable " Highlight
 
