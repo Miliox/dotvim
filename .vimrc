@@ -73,6 +73,11 @@ noremap  <silent> <C-C> Y
 vnoremap <silent> <C-C> y
 inoremap <silent> <C-C> <ESC>Y`[
 
+" Paste from Clipboard
+noremap <silent>  <C-V> p
+vnoremap <silent> <C-V> p
+inoremap <silent> <C-V> <ESC>p`[
+
 " Close Vim
 noremap  <silent> <C-X> :quit<CR>
 vnoremap <silent> <C-X> :quit<CR>
