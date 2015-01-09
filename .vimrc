@@ -224,7 +224,8 @@ smap <silent> <C-S-space> <Esc>l:call snipMate#BackwardsSnippet()<CR>v
 
 let g:vimshell_prompt = "$"
 let g:vimshell_secondary_prompt = ">"
-let g:templates_plugin_loaded = 1
 let g:SuperTabDefaultCompletionType = "context"
 
 source $HOME/.vim/bundle/snipmate/after/plugin/snipMate.vim
+
+execute "set colorcolumn=" . join(range(121,335), ',')
