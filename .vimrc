@@ -19,12 +19,12 @@ syntax enable " Highlight
 set autoread                   " Reaload file if changed outside
 set backspace=indent,eol,start " Expected Behaviour for Backspace
 set backup                     " Always keep a backup file
-set columns=84                 " Initial column length
+" set columns=84                 " Initial column length
 set clipboard=unnamed          " Expected Behaviour for Clipboard
 set foldmethod=indent          " Hide methods content
 set laststatus=2               " Show Status Line
 set hlsearch                   " Enable search in highlight
-set lines=34                   " Initial line length
+" set lines=34                   " Initial line length
 set mouse=a                    " Expected Behaviour for Mouse
 set nocompatible               " Remove VI Annoyance
 set nowrap                     " Don't break in virtual lines
