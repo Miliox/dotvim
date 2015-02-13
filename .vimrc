@@ -229,3 +229,7 @@ let g:SuperTabDefaultCompletionType = "context"
 source $HOME/.vim/bundle/snipmate/after/plugin/snipMate.vim
 
 execute "set colorcolumn=" . join(range(121,335), ',')
+
+" Vim-template Config
+let g:email = "emiliano.firmino@gmail.com"
+let g:user  = "Emiliano Firmino"
