@@ -13,6 +13,7 @@ filetype plugin indent on
 
 scriptencoding utf-8
 set encoding=utf-8
+set modelines=5
 
 syntax enable " Highlight
 
@@ -233,3 +234,9 @@ execute "set colorcolumn=" . join(range(121,335), ',')
 " Vim-template Config
 let g:email = "emiliano.firmino@gmail.com"
 let g:user  = "Emiliano Firmino"
+
+" Better wrap form markdown files
+autocmd BufNewFile,BufRead *.md :set wrap
+autocmd BufNewFile,BufRead *.md :set linebreak
+autocmd BufNewFile,BufRead *.md :set nolist
+autocmd BufNewFile,BufRead *.md :set colorcolumn&
