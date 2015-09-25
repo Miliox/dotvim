@@ -242,3 +242,7 @@ autocmd FileType markdown :set wrap
 autocmd FileType markdown :set linebreak
 autocmd FileType markdown :set nolist
 autocmd FileType markdown :set colorcolumn&
+
+autocmd FileType markdown,mkd call pencil#init()
+                          \ | call lexical#init()
+                          \ | call litecorrect#init()

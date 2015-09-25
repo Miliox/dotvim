@@ -161,3 +161,12 @@
 [submodule "bundle/markdown"]
 	path = bundle/markdown
 	url = https://github.com/tpope/vim-markdown.git
+[submodule "bundle/pencil"]
+	path = bundle/pencil
+	url = https://github.com/reedes/vim-pencil
+[submodule "bundle/lexical"]
+	path = bundle/lexical
+	url = https://github.com/reedes/vim-lexical.git
+[submodule "bundle/litecorrect"]
+	path = bundle/litecorrect
+	url = https://github.com/reedes/vim-litecorrect.git
