@@ -236,7 +236,9 @@ let g:email = "emiliano.firmino@gmail.com"
 let g:user  = "Emiliano Firmino"
 
 " Better wrap form markdown files
-autocmd BufNewFile,BufRead *.md :set wrap
-autocmd BufNewFile,BufRead *.md :set linebreak
-autocmd BufNewFile,BufRead *.md :set nolist
-autocmd BufNewFile,BufRead *.md :set colorcolumn&
+au! BufRead,BufNewFile *.md set filetype=markdown
+
+autocmd FileType markdown :set wrap
+autocmd FileType markdown :set linebreak
+autocmd FileType markdown :set nolist
+autocmd FileType markdown :set colorcolumn&
